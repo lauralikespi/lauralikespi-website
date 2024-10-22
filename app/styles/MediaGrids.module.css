@@ -11,6 +11,10 @@
     margin-bottom: 2rem;
     color: var(--foreground);
   }
+
+.talksPage p {
+  color: var(--background);
+}
   
   .talksGrid {
     display: grid;
