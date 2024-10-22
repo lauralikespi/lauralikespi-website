@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "slug": "i-built-a-thing",
+      "title": "I Built a Thing. And I broke It.",
+      "author": "Laura Gemmell",
+      "date": "2024-10-21",
+      "excerpt": "Things are getting a bit more real with this whole “product-based business” thing. I had my first live support incident this week.",
+      "contentFile": "i-built-a-thing.html",
+      "image": "/images/errors-everywhere.png",
+      "topics_array": ["Coding", "Founder Life", "Technology"]
+    }
+  ]
+}

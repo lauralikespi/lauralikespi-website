@@ -1,0 +1,28 @@
+.container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 2rem auto;
+  }
+  
+  .digit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 16px;
+    animation: moveAlongSpiral 20s linear infinite;
+    animation-delay: calc(var(--index) * -0.4s);
+  }
+  
+  .paused {
+    animation-play-state: paused;
+  }
+  
+  @keyframes moveAlongSpiral {
+    0% {
+      transform: rotate(0deg) translateX(0px);
+    }
+    100% {
+      transform: rotate(720deg) translateX(150px);
+    }
+  }

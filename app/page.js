@@ -1,95 +1,49 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import SpinningPiSpiral from './components/SpinningPiSpiral';
+import styles from './styles/page.module.css';
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+        <h1>Hello, I'm Laura</h1>
+        <p>Wearing of many hats, including that of a developer, data scientist, educator, writer, researcher, entrepreneur and content creator.</p>
+        
+        <SpinningPiSpiral />
+        
+        {/* <section className={styles.intro}>
+          <h2>Welcome to my digital space!</h2>
+          <p>I'm passionate about the intersection of technology, innovation, and education. Here, you'll find my thoughts on data, fintech, and the future of tech education.</p>
+        </section> */}
+        
+        <section className={styles.quickLinks}>
+          {/* <h3>Explore My Work</h3> */}
+          <div className={styles.linkGrid}>
+            <Link href="/blog" className={styles.card}>
+              <h4>Blog</h4>
+              <br/>
+              <p>Read my latest rambles on all things tech and innovation - from Black Mirror to angel investing.</p>
+            </Link>
+            <Link href="/projects" className={styles.card}>
+              <h4>Projects</h4>
+              <br/>
+              <p>Some fun little coding and data projects I've worked on.</p>
+            </Link>
+            <Link href="/talks" className={styles.card}>
+              <h4>Talks</h4>
+              <br/>
+              <p>On many topics from women in tech to tiny robots and flocks of birds.</p>
+            </Link>
+            <Link href="/writing" className={styles.card}>
+              <h4>External Writing</h4>
+              <br/>
+              <p>Other people sometimes ask me to write my opinions for them.</p>
+            </Link>
+          </div>
+        </section>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
