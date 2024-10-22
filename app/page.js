@@ -8,14 +8,14 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <h1>Hello, I'm Laura</h1>
+        <h1>Hello, I&apos;m Laura</h1>
         <p>Wearing of many hats, including that of a developer, data scientist, educator, writer, researcher, entrepreneur and content creator.</p>
         
         <SpinningPiSpiral />
         
         {/* <section className={styles.intro}>
           <h2>Welcome to my digital space!</h2>
-          <p>I'm passionate about the intersection of technology, innovation, and education. Here, you'll find my thoughts on data, fintech, and the future of tech education.</p>
+          <p>I&apos;m passionate about the intersection of technology, innovation, and education. Here, you&apos;ll find my thoughts on data, fintech, and the future of tech education.</p>
         </section> */}
         
         <section className={styles.quickLinks}>
@@ -29,7 +29,7 @@ export default function Home() {
             <Link href="/projects" className={styles.card}>
               <h4>Projects</h4>
               <br/>
-              <p>Some fun little coding and data projects I've worked on.</p>
+              <p>Some fun little coding and data projects I&apos;ve worked on.</p>
             </Link>
             <Link href="/talks" className={styles.card}>
               <h4>Talks</h4>

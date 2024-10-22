@@ -6,20 +6,25 @@
   border-radius: 15px;
 }
   
-  .blogPage h1 {
-    color: #333;
-    margin-bottom: 2rem;
-  }
+.blogPage h1 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.blogPosts {
+  display: grid;
+  gap: 2rem;
+}
+
+.topicFilter select {
+  padding: 0.2rem;
+}
   
-  .blogPosts {
-    display: grid;
-    gap: 2rem;
+@media (max-width: 768px) {
+  .blogPage {
+    max-width: 90%;
+    padding: 1rem;
   }
-  
-  @media (max-width: 768px) {
-    .blogPage {
-      padding: 1rem;
-    }
-  }
+}
 
 

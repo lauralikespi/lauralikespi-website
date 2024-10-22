@@ -3,6 +3,7 @@ import {useState, useEffect, React} from 'react';
 import styles from '../../styles/page.module.css';
 import blogStyles from '../../styles/BlogPost.module.css';
 import mockBlogPosts from '../mockBlogPosts.json';
+import Image from 'next/image';
 
 function getPostBySlug(slug) {
   return mockBlogPosts.posts.find(post => post.slug === slug);
@@ -36,13 +37,32 @@ export default function BlogPost({ params }) {
       <section className={`${styles.hero} ${blogStyles.blogHero}`}>
         <div className={styles.heroContent}>
           <h1>{post.title}</h1>
-          <p className={blogStyles.meta}>By {post.author} | {new Date(post.date).toLocaleDateString('en-GB')}</p>
         </div>
+        <br/>
+        <p className={blogStyles.metaTitle}>By {post.author} | {new Date(post.date).toLocaleDateString('en-GB')}</p>
+
+        <br/>
         <div className={styles.heroImage}>
-          <img src={post.image} alt={post.title} width={500} height={300} />
+          {/* <img src={post.image} alt={post.title} width={500} height={300} /> */}
+
+          <Image
+            src={post.image}
+            alt={post.title}
+            width={500}
+            height={300}
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+            }}
+            priority
+          />
         </div>
+        <br/>
+        <br/>
       </section>
       <section className={blogStyles.content}>
+
         <article className={blogStyles.fullPost}>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </article>

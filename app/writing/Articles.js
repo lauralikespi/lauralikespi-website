@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/MediaGrids.module.css';
+import Image from 'next/image';
 
 const Articles = () => {
   const articles = [
@@ -72,7 +73,9 @@ const Articles = () => {
     <div className={styles.talksGrid}>
       {articles.sort((a, b) => new Date(b.date) - new Date(a.date)).map((talk, index) => (
         <div key={index} className={styles.talkCard}>
-          <img src={talk.image} alt={talk.title} className={styles.talkImage} />
+          {/* <img src={talk.image} alt={talk.title} className={styles.talkImage} /> */}
+          <Image src={talk.image} alt={talk.title} className={styles.talkImage}  width={200} height={200} />
+
           <div className={styles.talkInfo}>
             <h2>{talk.title}</h2>
             <p><strong>Company:</strong> {talk.company}</p>

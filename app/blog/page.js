@@ -43,8 +43,8 @@ export default function Blog({ searchParams }) {
     const totalPages = Math.ceil(totalCount / 10);
 
     return (
-      <main className={styles.main}>
-        <section className={styles.singlePage}>
+      // <main className={styles.main}>
+      //   <section className={styles.singlePage}>
           <BlogPage 
             posts={posts} 
             currentPage={page} 
@@ -52,8 +52,8 @@ export default function Blog({ searchParams }) {
             topics={topics} 
             currentTopic={topic}
           />
-        </section>
-      </main>
+      //   </section>
+      // </main>
     );
   } catch (error) {
     return (

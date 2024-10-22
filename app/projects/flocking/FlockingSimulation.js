@@ -27,8 +27,8 @@ const FlockingSimulation = () => {
 
   useEffect(() => {
     setIsMounted(true);
-    initializeBoids();
-  }, []);
+    initialiseBoids();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     let intervalId;
@@ -38,9 +38,9 @@ const FlockingSimulation = () => {
       }, 50);
     }
     return () => clearInterval(intervalId);
-  }, [isRunning, settings]);
+  }, [isRunning, settings]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const initializeBoids = () => {
+  const initialiseBoids = () => {
     const newBoids = Array.from({ length: settings.numBoids }, () => ({
       x: w * (Math.round(Math.random()) * 2 - 1) * Math.random(),
       y: h * (Math.round(Math.random()) * 2 - 1) * Math.random(),
@@ -164,7 +164,7 @@ const FlockingSimulation = () => {
   };
 
   const restartSimulation = () => {
-    initializeBoids();
+    initialiseBoids();
     setIsRunning(true);
   };
 

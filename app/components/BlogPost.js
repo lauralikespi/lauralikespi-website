@@ -15,20 +15,25 @@ const BlogPost = ({ post }) => {
       <p className={styles.meta}>
         By {post.author} | {formatDate(post.date)}
       </p>
-
-      <div className={styles.postContent}>
-        {/* <img className={styles.postImage} src={post.image} alt={post.title} /> */}
-        <div className={styles.imageWrapper}>
+      <div className={styles.imageWrapper}>
         <Image
-          src={post.image}
-          alt={post.title}
-          layout="responsive"
-          width={600}
-          height={400}
-          className={styles.postImage}
-        />
+            src={post.image}
+            alt={post.title}
+            width={600}
+            height={400}
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+            }}
+            priority
+          />
       </div>
-        <div className={styles.postText}>
+
+      {/* <div className={styles.postContent}> */}
+        {/* <img className={styles.postImage} src={post.image} alt={post.title} /> */}
+
+        {/* <div className={styles.postText}> */}
           <p className={styles.excerpt}>{post.excerpt}</p>
           <div className={styles.topics}>
             {post.topics_array.map((topic, index) => (
@@ -38,8 +43,8 @@ const BlogPost = ({ post }) => {
             <Link href={`/blog/${post.slug}`} className={styles.readMore}>
             Read More
           </Link>
-        </div>
-      </div>
+        {/* </div> */}
+      {/* </div> */}
 
     </article>
   );
