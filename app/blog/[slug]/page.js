@@ -4,6 +4,7 @@ import styles from '../../styles/page.module.css';
 import blogStyles from '../../styles/BlogPost.module.css';
 import mockBlogPosts from '../mockBlogPosts.json';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function getPostBySlug(slug) {
   return mockBlogPosts.posts.find(post => post.slug === slug);
@@ -26,7 +27,7 @@ export default function BlogPost({ params }) {
     };
 
     fetchContent();
-  }, [post.contentFile]);
+  }, [post?.contentFile]);
 
   if (!post) {
     return <div>Post not found</div>;
@@ -34,7 +35,14 @@ export default function BlogPost({ params }) {
 
   return (
     <main className={styles.main}>
+
+      
       <section className={`${styles.hero} ${blogStyles.blogHero}`}>
+        <div className={blogStyles.backLink}>
+          <Link href="/blog">
+            <span className={blogStyles.backArrow}>←</span> Back to Blog
+          </Link>
+        </div>
         <div className={styles.heroContent}>
           <h1>{post.title}</h1>
         </div>
@@ -43,8 +51,6 @@ export default function BlogPost({ params }) {
 
         <br/>
         <div className={blogStyles.imageWrapper}>
-          {/* <img src={post.image} alt={post.title} width={500} height={300} /> */}
-
           <Image
             src={post.image}
             alt={post.title}
@@ -62,7 +68,6 @@ export default function BlogPost({ params }) {
         <br/>
       </section>
       <section className={blogStyles.content}>
-
         <article className={blogStyles.fullPost}>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </article>

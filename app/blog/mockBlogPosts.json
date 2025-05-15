@@ -10,6 +10,41 @@
       "contentFile": "i-built-a-thing.html",
       "image": "/images/errors-everywhere.png",
       "topics_array": ["Coding", "Founder Life", "Technology"]
+    },
+    {
+      "id": 2,
+      "slug": "laura-likes-ai",
+      "title": "Laura Likes AI #0— Why Oh Why?",
+      "author": "Laura Gemmell",
+      "date": "2020-08-03",
+      "excerpt": "Someone once expressed to me they saw AI as the 'intersection of everything you do'.",
+      "contentFile": "laura-likes-ai.html",
+      "image": "/images/blog/ai-venn-diagram-revisited.png",
+      "topics_array": ["Founder Life", "AI", "Data", "Technology"]
+    },
+    {
+      "id": 3,
+      "slug": "making-money-is-only-for-the-uber-rich",
+      "title": "Making Money is Only For the Uber Rich",
+      "author": "Laura Gemmell",
+      "date": "2024-02-28",
+      "excerpt": "Only those earning over £170k can Angel Invest now.",
+      "contentFile": "making-money-is-only-for-the-uber-rich.html",
+      "image": "/images/blog/uber-rich.png",
+      "topics_array": ["Founder Life", "Investing", "Money"]
+    },
+    {
+      "id": 4,
+      "slug": "i-hate-january",
+      "title": "Happy 2024. I Hate January.",
+      "author": "Laura Gemmell",
+      "date": "2024-01-08",
+      "excerpt": "January is tough. It makes me reflect too much. Every year.",
+      "contentFile": "i-hate-january.html",
+      "image": "/images/blog/ai-figs.png",
+      "topics_array": ["Founder Life"]
     }
+
   ]
 }
+

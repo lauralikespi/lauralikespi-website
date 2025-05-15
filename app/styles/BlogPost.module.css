@@ -63,6 +63,14 @@
   margin-bottom: 1rem;
 }
 
+.content a {
+  text-decoration: underline;
+}
+
+.content a:hover {
+  font-weight: bold;
+}
+
 .excerpt {
   color: var(--text);
   flex: 1;
@@ -110,6 +118,33 @@
 .fullPost ul, .fullPost ol {
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+.backLink {
+  margin-bottom: 30px;
+  padding-top: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.backLink a {
+  display: inline-flex;
+  align-items: center;
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.backLink a:hover {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.backArrow {
+  margin-right: 8px;
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {
