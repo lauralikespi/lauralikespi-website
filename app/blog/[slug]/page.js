@@ -42,7 +42,7 @@ export default function BlogPost({ params }) {
         <p className={blogStyles.metaTitle}>By {post.author} | {new Date(post.date).toLocaleDateString('en-GB')}</p>
 
         <br/>
-        <div className={styles.heroImage}>
+        <div className={blogStyles.imageWrapper}>
           {/* <img src={post.image} alt={post.title} width={500} height={300} /> */}
 
           <Image

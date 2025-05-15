@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import SpinningPiSpiral from './components/SpinningPiSpiral';
 import styles from './styles/page.module.css';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -11,7 +12,16 @@ export default function Home() {
         <h1>Hello, I&apos;m Laura</h1>
         <p>Wearing of many hats, including that of a developer, data scientist, educator, writer, researcher, entrepreneur and content creator.</p>
         
-        <SpinningPiSpiral />
+        <div>
+          <Image 
+            src="/images/jgi_data_week_talk.png" 
+            alt="Laura giving a talk" 
+            className={`${styles.talkImage} ${styles.featuredImage}`}  
+            width={600} 
+            height={360} 
+            priority
+          />
+        </div>
         
         {/* <section className={styles.intro}>
           <h2>Welcome to my digital space!</h2>

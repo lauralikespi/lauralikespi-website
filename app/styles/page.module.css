@@ -33,13 +33,14 @@
 }
 
 .card {
-  background-color: var(--foreground);
+  background-color: var(--accent);
   color: var(--background);
   border-radius: 8px;
   padding: 1rem;
   text-decoration: none;
-  color: inherit;
+  /* color: inherit; */
   transition: transform 0.3s ease;
+  box-shadow: var(--box-shadow);
 }
 
 .card:hover {
@@ -48,16 +49,29 @@
 
 .card h4 {
   margin-top: 0;
-  color: var(--background);
+  color: var(--text);
 }
 
 .card p {
-  color: var(--background);
+  color: var(--text);
 }
 
 .footer {
   padding: 1rem;
   text-align: center;
+}
+
+.featuredImage {
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  border: 1px solid #e6e0eb; /* Very light purple border */
+  transition: transform 0.3s ease;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.featuredImage:hover {
+  transform: scale(1.02); /* Subtle zoom effect on hover */
 }
 
 @media (max-width: 600px) {

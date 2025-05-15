@@ -1,17 +1,23 @@
 :root {
-  --background: #D7A1F9;
-  --foreground: #341948;
-  --accent: #087E8B;
+  --background: #F0EFF4;
+  /* #F7ECFE; */
+
+  --text: #341948;
+  /* 1F2041; */
+  --accent: #4ECDC4;
+  --accent-2: #E56399;
+
+  --box-shadow: 0 4px 8px var(--text); 
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #341948;
-    --foreground: #D7A1F9;
+    --text: #E7C5FC;
     --accent-dark: #44ffd1;
     --accent-light: #e40066;
   }
-}
+} */
 
 html,
 body {
@@ -20,7 +26,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text);
   background: var(--background);
   font-family: Futura, Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;

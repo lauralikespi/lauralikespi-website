@@ -1,7 +1,7 @@
 .header {
   padding: 1rem;
-  background-color: #D7A1F9;
-  color: #341948;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .headerTop {
@@ -33,6 +33,13 @@
   margin: 0.5rem 0 0;
   font-size: 1rem;
   line-height: 1.4;
+}
+
+.header hr {
+  margin: 1rem;
+  color: var(--text);
+  border-style: dashed;
+  
 }
 
 @media (max-width: 768px) {
