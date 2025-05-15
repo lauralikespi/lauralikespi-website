@@ -48,7 +48,7 @@ export default function Navigation() {
         <li><Link href="/blog" onClick={handleLinkClick}>Blog</Link></li>
         <li><Link href="/projects" onClick={handleLinkClick}>Projects</Link></li>
         <li><Link href="/talks" onClick={handleLinkClick}>Talks</Link></li>
-        <li><Link href="/writing" onClick={handleLinkClick}>External Writing</Link></li>
+        <li><Link href="/writing" onClick={handleLinkClick}>Published Writing</Link></li>
       </ul>
     </nav>
   );

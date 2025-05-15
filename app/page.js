@@ -47,7 +47,7 @@ export default function Home() {
               <p>On many topics from women in tech to tiny robots and flocks of birds.</p>
             </Link>
             <Link href="/writing" className={styles.card}>
-              <h4>External Writing</h4>
+              <h4>Published Writing</h4>
               <br/>
               <p>Other people sometimes ask me to write my opinions for them.</p>
             </Link>
