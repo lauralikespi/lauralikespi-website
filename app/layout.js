@@ -6,7 +6,7 @@ export const metadata = {
   title: "lauralikespi",
   description: 'Technology, Innovation and Education',
   icons: {
-    icon: '/pi-logo.png',
+    icon: '/images/favicon.png',
 },
 };
 

@@ -1,65 +1,111 @@
 .nav {
-    position: relative;
-  }
-  
+  position: relative;
+}
+
+/* Position the burger button at the bottom of the container */
+.burgerButton {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* padding: 10px; */
+  position: absolute;
+  bottom: 0;
+  right: 3px; /* Adjust as needed for horizontal position */
+  z-index: 1000; /* Ensure it stays above the full-screen menu */
+}
+
+.burgerIcon,
+.burgerIcon::before,
+.burgerIcon::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s;
+}
+
+.burgerIcon::before {
+  transform: translateY(-8px);
+}
+
+.burgerIcon::after {
+  transform: translateY(5px);
+}
+
+/* Transform burger to X when menu is open */
+.open .burgerIcon {
+  background-color: transparent; /* Hide the middle line */
+}
+
+.open .burgerIcon::before {
+  transform: rotate(45deg); /* Create the X */
+}
+
+.open .burgerIcon::after {
+  transform: rotate(-45deg) translateY(-8px) translateX(8px); /* Complete the X */
+}
+
+/* Full screen mobile navigation */
+.navList {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* When menu is open, make it fullscreen */
+.navList.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
+  z-index: 999;
+}
+
+.navList li {
+  margin-bottom: 20px; /* Increased spacing for mobile */
+  text-align: center;
+}
+
+.navList a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.5rem; /* Larger font size for mobile menu */
+  padding: 10px;
+}
+
+.navList a:hover {
+  text-decoration: underline;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
   .burgerButton {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .burgerIcon,
-  .burgerIcon::before,
-  .burgerIcon::after {
-    content: '';
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    transition: all 0.3s;
-  }
-  
-  .burgerIcon::before {
-    transform: translateY(-8px);
-  }
-  
-  .burgerIcon::after {
-    transform: translateY(5px);
-  }
-  
-  .navList {
     display: none;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
   }
-  
-  .navList.open {
-    display: block;
+
+  .navList {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    background-color: transparent;
+    position: static;
   }
-  
+
   .navList li {
-    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-bottom: 0;
   }
   
   .navList a {
-    text-decoration: none;
-    color: #333;
+    font-size: 1rem; /* Reset font size for desktop */
   }
-  
-  @media (min-width: 768px) {
-    .burgerButton {
-      display: none;
-    }
-  
-    .navList {
-      display: flex;
-    }
-  
-    .navList li {
-      margin-left: 20px;
-      margin-bottom: 0;
-    }
-  }
+}

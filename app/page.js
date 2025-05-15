@@ -10,7 +10,7 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>Hello, I&apos;m Laura</h1>
-        <p>Wearing of many hats, including that of a developer, data scientist, educator, writer, researcher, entrepreneur and content creator.</p>
+        <p>Wearer of many hats, including that of a developer, data scientist, educator, writer, researcher, entrepreneur and content creator.</p>
         
         <div>
           <Image 

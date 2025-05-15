@@ -78,9 +78,15 @@
   .linkGrid {
     grid-template-columns: 1fr;
   }
+
+  .featuredImage {
+    width: 95vw;
+    height: auto;
+  }
 }
 
 .footer {
   padding: 1rem;
   text-align: center;
 }
+
