@@ -80,6 +80,18 @@
       "contentFile": "working-less.html",
       "image": "/images/blog/working-less.png",
       "topics_array": ["Founder Life"]
+    },
+    {
+      "id": 8,
+      "slug": "not-everyone-likes-peaches",
+      "title": "I Don't Care If You Don't Like Peaches",
+      "subtitle": "Products Shouldn’t Be Built for Everyone",
+      "author": "Laura Gemmell",
+      "date": "2024-11-19",
+      "excerpt": "I seem to have accidentally created a brand – and a product – that is a little like Marmite. Some people hate it, others love it. And I’m finally okay with that.",
+      "contentFile": "not-everyone-likes-peaches.html",
+      "image": "/images/blog/dont-like-peaches.png",
+      "topics_array": ["Founder Life"]
     }
     
 

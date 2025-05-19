@@ -21,6 +21,8 @@ const BlogPage = ({ posts, currentPage, totalPages, topics, currentTopic }) => {
   return (
     <div className={styles.blogPage}>
       <h1>Blog</h1>
+
+      <p><i>"[I write] to find out what I think about things I don't understand."</i> <br/>- Brooke Harwood (Nicole Kidman), A Family Affair.</p>
       <div className={styles.topicFilter}>
         <select 
           value={currentTopic || ''} 
