@@ -44,7 +44,13 @@ export default function BlogPost({ params }) {
           </Link>
         </div>
         <div className={styles.heroContent}>
+          {(post.series) && (
+            <p style={{paddingBottom: "2vh"}}>{post.series}</p>
+          ) }
           <h1>{post.title}</h1>
+          {(post.subtitle) && (
+            <p style={{paddingTop: "2vh"}} ><i>{post.subtitle}</i></p>
+          ) }
         </div>
         <br/>
         <p className={blogStyles.metaTitle}>By {post.author} | {new Date(post.date).toLocaleDateString('en-GB')}</p>
@@ -64,8 +70,10 @@ export default function BlogPost({ params }) {
             priority
           />
         </div>
-        <br/>
-        <br/>
+        {(post.imageText) && (
+          <p style={{textAlign: "center"}}><i>{post.imageText}</i></p>
+        )}
+
       </section>
       <section className={blogStyles.content}>
         <article className={blogStyles.fullPost}>

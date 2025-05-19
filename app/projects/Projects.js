@@ -4,10 +4,10 @@ import Image from 'next/image';
 
 const projectData = [
   {
-    title: "DOT-ed",
-    image: "/images/dot-ed-logo.png",
-    blurb: "DOT-ed is the personalised learning platform for my company Taught by Humans. Built in NextJS and React. Hosted on Vercel. Using supabase and OpenAI to personalise our content.",
-    url: "/projects/dot-ed",
+    title: "Taught by Humans Learning Platform",
+    image: "/images/platform.png",
+    blurb: "I built the personalised learning platform for my company Taught by Humans. Built in NextJS and React. Hosted on Vercel. Using Supabase and OpenAI to personalise our content.",
+    url: "https://platform.taughtbyhumans.com",
     type: "Business"
   },
   {
@@ -27,7 +27,7 @@ const ProjectsPage = () => {
         {projectData.map((talk, index) => (
           <div key={index} className={styles.talkCard}>
             {/* <img src={talk.image} alt={talk.title} className={styles.talkImage} /> */}
-            <Image src={talk.image} alt={talk.title} className={styles.talkImage}  width={200} height={200} />
+            <Image src={talk.image} alt={talk.title} className={styles.talkImage}  width={200} height={200} priority />
 
             <div className={styles.talkInfo}>
               <h2>{talk.title}</h2>
@@ -36,7 +36,7 @@ const ProjectsPage = () => {
               <p><strong>Date:</strong> {new Date(talk.date).toLocaleDateString('en-GB')}</p>
               <p><strong>Series:</strong> {talk.series}</p> */}
               <p><strong>Type:</strong> {talk.type}</p>
-              <a href={talk.url} rel="noopener noreferrer" className={styles.watchButton}>
+              <a href={talk.url} rel="noopener noreferrer" target="_blank" className={styles.watchButton}>
                 Learn More
               </a>
             </div>

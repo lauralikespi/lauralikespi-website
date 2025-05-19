@@ -43,7 +43,45 @@
       "contentFile": "i-hate-january.html",
       "image": "/images/blog/ai-figs.png",
       "topics_array": ["Founder Life"]
+    },
+    {
+      "id": 5,
+      "slug": "ive-been-an-awful-ceo",
+      "series": "Finding My Way as a Reluctant Founder",
+      "title": "Part 1: I've Been an Awful CEO This Week",
+      "subtitle": "But maybe it's exactly what the business, the team and me needed.",
+      "author": "Laura Gemmell",
+      "date": "2025-04-30",
+      "excerpt": "But maybe it's exactly what the business, the team and me needed.",
+      "contentFile": "ive-been-an-awful-ceo.html",
+      "image": "/images/blog/laura-wearing-many-hats.png",
+      "imageText": "Me, wearing many hats - in business and in life.",
+      "topics_array": ["Founder Life"]
+    },
+    {
+      "id": 6,
+      "slug": "grant-me-the-will-to-live",
+      "title": "Grant Me the Will to Live",
+      "author": "Laura Gemmell",
+      "date": "2025-05-19",
+      "excerpt": "We won a grant - but the process was not fun.",
+      "contentFile": "grant-me-the-will-to-live.html",
+      "image": "/images/blog/grant-failures.png",
+      "topics_array": ["Founder Life"]
+    },
+    {
+      "id": 7,
+      "slug": "working-less",
+      "title": "Part 2: Working Less",
+      "series": "Finding My Way as a Reluctant Founder",
+      "author": "Laura Gemmell",
+      "date": "2025-05-15",
+      "excerpt": "Reflections on holidays, balance, and finding a more sustainable way of working as a reluctant founder.",
+      "contentFile": "working-less.html",
+      "image": "/images/blog/working-less.png",
+      "topics_array": ["Founder Life"]
     }
+    
 
   ]
 }

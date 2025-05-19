@@ -71,7 +71,7 @@
 }
 
 .featuredImage:hover {
-  transform: scale(1.02); /* Subtle zoom effect on hover */
+  transform: scale(1.02); 
 }
 
 @media (max-width: 600px) {

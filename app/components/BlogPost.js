@@ -11,6 +11,9 @@ const BlogPost = ({ post }) => {
 
   return (
     <article className={styles.blogPost}>
+      {(post.series) && (
+        <h3>{post.series}</h3>
+      )}
       <h2><Link href={`/blog/${post.slug}`} className={styles.readMore}>{post.title}</Link></h2>
       <p className={styles.meta}>
         By {post.author} | {formatDate(post.date)}

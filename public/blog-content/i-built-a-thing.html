@@ -1,62 +1,62 @@
-<p>Things are getting a bit more real with this whole “product-based business” thing. I had my first live support incident this week.</p><br/><br/>
+<p>Things are getting a bit more real with this whole “product-based business” thing. I had my first live support incident this week.</p>
 
-<p>What initially felt like a level 1 incident (those urgent, serious issues that need immediate attention), was actually quite minor and easily fixable. The reason this situation felt so intense was the unfortunate combination of a few factors:</p><br/><br/>
+<p>What initially felt like a level 1 incident (those urgent, serious issues that need immediate attention), was actually quite minor and easily fixable. The reason this situation felt so intense was the unfortunate combination of a few factors:</p>
 
 <ul>
   <li>the feeling of “no one is coming to save me” - I had to deal with the issues myself (as anyone running a startup understands, I’m already behind on my overwhelming to-do list)</li>
   <li>I actually caused this incident (on Friday when I was rushed to add several new features in a day (with a clear head, this should have been two weeks worth of work and testing)</li>
-</ul><br/><br/>
+</ul>
 
-<p>Basically, I added a feature that wasn’t fully tested, causing new users to get stuck during sign-up. Actually I added email sign ups (did not check every possible user flow). I also tried to make a particular flow when signing up a bit more slick.</p><br/><br/>
+<p>Basically, I added a feature that wasn’t fully tested, causing new users to get stuck during sign-up. Actually I added email sign ups (did not check every possible user flow). I also tried to make a particular flow when signing up a bit more slick.</p>
 
-<p>For those who want the techy details, I added a database function to automatically add content based on company, and for some reason set it to run on insert and update but only tested the update side - as this is when it needed to run. Which meant that new users were unable to sign up as they couldn't be added to the database.)</p><br/><br/>
+<p>For those who want the techy details, I added a database function to automatically add content based on company, and for some reason set it to run on insert and update but only tested the update side - as this is when it needed to run. Which meant that new users were unable to sign up as they couldn't be added to the database.)</p>
 
-<p>Now that it’s all sorted (and I can breath), it has been a necessary reminder of some good practices:</p><br/><br/>
+<p>Now that it’s all sorted (and I can breath), it has been a necessary reminder of some good practices:</p>
 
 <ul>
   <li><strong>Don't push to production on a Friday</strong></li>
   <li><strong>Test test test</strong></li>
   <li><strong>Slow down to speed up</strong></li>
-</ul><br/><br/>
+</ul>
 
-<h3>Don't push to production on a Friday</h3><br/><br/>
+<h3>Don't push to production on a Friday</h3>
 
-<p>Everyone who has ever worked for a tech company knows this mantra. <strong>DO NOT PUSH TO PRODUCTION ON FRIDAY.</strong> Or any day where you aren't going to be around to fix things. Of course, we all know this but we also always think our code works so what's the harm…</p><br/><br/>
+<p>Everyone who has ever worked for a tech company knows this mantra. <strong>DO NOT PUSH TO PRODUCTION ON FRIDAY.</strong> Or any day where you aren't going to be around to fix things. Of course, we all know this but we also always think our code works so what's the harm…</p>
 
-<p>Similarly, do not deploy anything in a rush (even when fixing things). It just causes more problems - actually my quick fix for something on Friday (restricting users from seeing certain content) had also introduced some minor issues for users when using multiple tabs. Also now resolved, but this week has not been good for my heart.</p><br/><br/>
+<p>Similarly, do not deploy anything in a rush (even when fixing things). It just causes more problems - actually my quick fix for something on Friday (restricting users from seeing certain content) had also introduced some minor issues for users when using multiple tabs. Also now resolved, but this week has not been good for my heart.</p>
 
-<p>Build a good enough product. Fix any serious issues (like people not being able to sign in), but other things can wait for proper testing and consideration.</p><br/><br/>
+<p>Build a good enough product. Fix any serious issues (like people not being able to sign in), but other things can wait for proper testing and consideration.</p>
 
-<h3>Test test test</h3><br/><br/>
+<h3>Test test test</h3>
 
-<p>Needing to be reminded of this one surprised me. I'm the queen of testing. I’ve learned the hard way that even ‘small’ changes can slip through without proper checks.</p><br/><br/>
+<p>Needing to be reminded of this one surprised me. I'm the queen of testing. I’ve learned the hard way that even ‘small’ changes can slip through without proper checks.</p>
 
-<p>My data colleagues at Monzo probably remember the time I wrote extensive tests for the fraud database, and refused to allow changes unless they passed. Much to everyone's annoyance, but I was tired of the issues the lack of testing was causing. Rather than just knowing what tests you need to do in your head, making them into a checklist or a requirement helps prevent any uncaught issues.</p><br/><br/>
+<p>My data colleagues at Monzo probably remember the time I wrote extensive tests for the fraud database, and refused to allow changes unless they passed. Much to everyone's annoyance, but I was tired of the issues the lack of testing was causing. Rather than just knowing what tests you need to do in your head, making them into a checklist or a requirement helps prevent any uncaught issues.</p>
 
-<p>To date I've been pretty good at testing DOT-ed as I've been building it. But now there are live users on the platform, I need to be more careful - even the smallest issues, now has real world implications.</p><br/><br/>
+<p>To date I've been pretty good at testing DOT-ed as I've been building it. But now there are live users on the platform, I need to be more careful - even the smallest issues, now has real world implications.</p>
 
-<p>This is an odd feeling - on one hand, yay customers are using the platform enough to notice broken things; on the other, I now have to ensure new changes (whether adding features or tidying flow) do not break things.</p><br/><br/>
+<p>This is an odd feeling - on one hand, yay customers are using the platform enough to notice broken things; on the other, I now have to ensure new changes (whether adding features or tidying flow) do not break things.</p>
 
-<p>I have been working on a new user flow for the entire platform - and this incident has made me realise I am going to restrict it to a few users to test, then roll out to our trial customers only (and ideally I can add a toggle to allow users to go back to the original flow to avoid users being blocked). A controlled approach to users testing new features will prevent any serious issues.</p><br/><br/>
+<p>I have been working on a new user flow for the entire platform - and this incident has made me realise I am going to restrict it to a few users to test, then roll out to our trial customers only (and ideally I can add a toggle to allow users to go back to the original flow to avoid users being blocked). A controlled approach to users testing new features will prevent any serious issues.</p>
 
-<h3>Slow down to speed up</h3><br/><br/>
+<h3>Slow down to speed up</h3>
 
-<p>Actually something I took from my time at Monzo, and a step further than just adding in some tests. And a very important mantra - one I've been sort of ignoring to get this product in people's hands.</p><br/><br/>
+<p>Actually something I took from my time at Monzo, and a step further than just adding in some tests. And a very important mantra - one I've been sort of ignoring to get this product in people's hands.</p>
 
-<p>Now I need to think through changes properly - design, implement, test, document. It also got me thinking it’s maybe the time for a little code audit to check everything is working as it should (yes this is actually something I enjoy).</p><br/><br/>
+<p>Now I need to think through changes properly - design, implement, test, document. It also got me thinking it’s maybe the time for a little code audit to check everything is working as it should (yes this is actually something I enjoy).</p>
 
-<p>In my attempt to fix some of the previously mentioned issues, I somehow blocked all Google logins. In my rush to fix everything at the same time, I fixed the multiple tab problem but added a new tab error. Taking a step back - I went the whole way back to when everything last worked, last Thursday. I then added little bits of functionality (fix the email flow, add the restrictions, fix the multiple tabs) and thankfully I was able to isolate the problem and fix it. Slowing down (and taking a walk) allowed me to speed up and fix things.</p><br/><br/>
+<p>In my attempt to fix some of the previously mentioned issues, I somehow blocked all Google logins. In my rush to fix everything at the same time, I fixed the multiple tab problem but added a new tab error. Taking a step back - I went the whole way back to when everything last worked, last Thursday. I then added little bits of functionality (fix the email flow, add the restrictions, fix the multiple tabs) and thankfully I was able to isolate the problem and fix it. Slowing down (and taking a walk) allowed me to speed up and fix things.</p>
 
-<p>Slowing down is also important when fixing problems, panic fixing often leads to more issues or technical debt. We are not a critical service (like payments, or anything health related), and I am a one person tech team, sometimes things will break and take a little bit of time to be fixed. And I need to learn to be okay with that.</p><br/><br/>
+<p>Slowing down is also important when fixing problems, panic fixing often leads to more issues or technical debt. We are not a critical service (like payments, or anything health related), and I am a one person tech team, sometimes things will break and take a little bit of time to be fixed. And I need to learn to be okay with that.</p>
 
-<h3>Moving from Rapid Prototyping Mode to Users</h3><br/><br/>
+<h3>Moving from Rapid Prototyping Mode to Users</h3>
 
-<p>One important thing I am taking away from this incident is that this no longer feels like “playing business”. It’s pretty real. And that means I need to make a change of tack with how I am building this platform.</p><br/><br/>
+<p>One important thing I am taking away from this incident is that this no longer feels like “playing business”. It’s pretty real. And that means I need to make a change of tack with how I am building this platform.</p>
 
-<p>To date, I feel I have been in rapid prototyping mode - building, checking things work and moving on to the next thing. I super enjoy this mode, and I'm keen to keep it going for our new features. But now the platform is quite stable and there are active users - from a trial and one of our workshops - I have to stop the rapid prototyping and put some testing controls in place to avoid users having issues - starting with using some automated test suites (I'm currently rolling out Cypress to do end to end flow testing).</p><br/><br/>
+<p>To date, I feel I have been in rapid prototyping mode - building, checking things work and moving on to the next thing. I super enjoy this mode, and I'm keen to keep it going for our new features. But now the platform is quite stable and there are active users - from a trial and one of our workshops - I have to stop the rapid prototyping and put some testing controls in place to avoid users having issues - starting with using some automated test suites (I'm currently rolling out Cypress to do end to end flow testing).</p>
 
-<p>But I'm taking this as a good sign - my baby is growing up and it’s starting to crawl, so it’s time to baby proof our process before things really get moving.</p><br/><br/>
+<p>But I'm taking this as a good sign - my baby is growing up and it’s starting to crawl, so it’s time to baby proof our process before things really get moving.</p>
 
-<p>Yay to being a founder. It's a fun rollercoaster of constant personal development (and for me, learning random new tech skills).</p><br/><br/>
+<p>Yay to being a founder. It's a fun rollercoaster of constant personal development (and for me, learning random new tech skills).</p>
 
 <p>Big breath and back to the to-do list.</p>
