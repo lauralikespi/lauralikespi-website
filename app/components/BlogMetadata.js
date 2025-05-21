@@ -3,16 +3,16 @@ import Head from 'next/head';
 
 export default function BlogMetadata({ post, url }) {
   // Set default values for SEO if post doesn't exist (for blog index page)
-  const title = post ? `${post.title} | Laura Gemmell's Blog` : "Laura Gemmell's Blog";
-  const description = post ? post.excerpt : "Laura Gemmell's thoughts on AI, technology, startups, and founder life";
-  const imageUrl = post ? `${process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'}${post.image}` : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'}/images/default-blog-image.png`;
-  const canonicalUrl = url ? `${process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'}${url}` : process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com';
+  const title = post ? `${post.title} | lauralikespi's Blog` : "lauralikespi's Blog";
+  const description = post ? post.excerpt : "lauralikespi's thoughts on AI, technology, startups, and founder life";
+  const imageUrl = post ? `${process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'}${post.image}` : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com'}/images/default-blog-image.png`;
+  const canonicalUrl = url ? `${process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'}${url}` : process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com';
   
   const metadata = {
-    title: 'My Page',
-    description: 'Page description here',
+    title: 'lauralikespi blog',
+    description: "lauralikespi's thoughts on AI, technology, startups, and founder life",
     }
-    
+
   return (
     <Head>
       {/* Basic Metadata */}
@@ -25,7 +25,7 @@ export default function BlogMetadata({ post, url }) {
       <meta property="og:description" content={description} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:site_name" content="Laura Gemmell's Blog" />
+      <meta property="og:site_name" content="lauralikespi's Blog" />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -63,7 +63,7 @@ export default function BlogMetadata({ post, url }) {
                 "name": "Laura Gemmell",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'}/images/logo.png`
+                  "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com'}/images/logo.png`
                 }
               },
               "isPartOf": {
@@ -95,7 +95,7 @@ export default function BlogMetadata({ post, url }) {
                 "name": "Laura Gemmell",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'}/images/logo.png`
+                  "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com'}/images/logo.png`
                 }
               }
             })
