@@ -5,8 +5,8 @@ export default function BlogMetadata({ post, url }) {
   // Set default values for SEO if post doesn't exist (for blog index page)
   const title = post ? `${post.title} | lauralikespi's Blog` : "lauralikespi's Blog";
   const description = post ? post.excerpt : "lauralikespi's thoughts on AI, technology, startups, and founder life";
-  const imageUrl = post ? `${process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'}${post.image}` : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com'}/images/default-blog-image.png`;
-  const canonicalUrl = url ? `${process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'}${url}` : process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com';
+  const imageUrl = post ? `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com'}${post.image}` : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com'}/images/default-blog-image.png`;
+  const canonicalUrl = url ? `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com'}${url}` : process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com';
   
   const metadata = {
     title: 'lauralikespi blog',
@@ -63,7 +63,7 @@ export default function BlogMetadata({ post, url }) {
                 "name": "Laura Gemmell",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com'}/images/logo.png`
+                  "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com'}/images/pi-logo.png`
                 }
               },
               "isPartOf": {
@@ -95,7 +95,7 @@ export default function BlogMetadata({ post, url }) {
                 "name": "Laura Gemmell",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com'}/images/logo.png`
+                  "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lauralikespi.com'}/images/pi-logo.png`
                 }
               }
             })
