@@ -2,6 +2,7 @@
 import Head from 'next/head';
 
 export default function BlogMetadata({ post, url }) {
+    console.log(post)
   // Set default values for SEO if post doesn't exist (for blog index page)
   const title = post ? `${post.title} | lauralikespi's Blog` : "lauralikespi's Blog";
   const description = post ? post.excerpt : "lauralikespi's thoughts on AI, technology, startups, and founder life";
