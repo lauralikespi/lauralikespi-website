@@ -12,6 +12,7 @@ export default function BlogMetadata({ post, url }) {
     title: 'My Page',
     description: 'Page description here',
     }
+    
   return (
     <Head>
       {/* Basic Metadata */}
