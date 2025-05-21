@@ -1,6 +1,8 @@
+// blog/page.js
 import BlogPage from '../components/BlogPage';
 import styles from "../styles/page.module.css";
 import mockBlogPosts from './mockBlogPosts.json';
+import BlogMetadata from '../components/BlogMetadata';
 
 function getBlogs(page = 1, pageSize = 10, topic = null) {
   let posts = mockBlogPosts.posts;
@@ -42,18 +44,33 @@ export default function Blog({ searchParams }) {
 
     const totalPages = Math.ceil(totalCount / 10);
 
+    // Generate a descriptive URL for the current page
+    let currentUrl = '/blog';
+    if (topic) {
+      currentUrl += `?topic=${topic}`;
+      if (page > 1) {
+        currentUrl += `&page=${page}`;
+      }
+    } else if (page > 1) {
+      currentUrl += `?page=${page}`;
+    }
+
     return (
-      // <main className={styles.main}>
-      //   <section className={styles.singlePage}>
-          <BlogPage 
-            posts={posts} 
-            currentPage={page} 
-            totalPages={totalPages} 
-            topics={topics} 
-            currentTopic={topic}
-          />
-      //   </section>
-      // </main>
+      <>
+        {/* Add the BlogMetadata component */}
+        <BlogMetadata 
+          post={null} // null because we're on the index page
+          url={currentUrl}
+        />
+        
+        <BlogPage 
+          posts={posts} 
+          currentPage={page} 
+          totalPages={totalPages} 
+          topics={topics} 
+          currentTopic={topic}
+        />
+      </>
     );
   } catch (error) {
     return (
